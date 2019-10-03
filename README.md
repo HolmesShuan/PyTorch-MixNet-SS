@@ -6,9 +6,9 @@ Precision | Top-1 (%) | Top-5 (%) | Params
 FP32 | 75.744 | 92.576 | 2.5 M
 FP16 | 75.714 | 92.570 | 1.3 M
 
-## [Model Link](./mixnet-ss.pth)
+### [Download Link](./mixnet-ss.pth)
 
-## Load params
+### How to load params ?
 ```python
 from collections import OrderedDict
 
@@ -19,7 +19,7 @@ for key_ori, key_pre in zip(model.state_dict().keys(), state_dict.keys()):
 model.load_state_dict(new_state_dict)       
 ```
 
-## Val setting
+### Inference setting :
 ```python
 normalize = transforms.Normalize(mean=[0.485, 0.456, 0.406],
                                      std=[0.225, 0.225, 0.225])
