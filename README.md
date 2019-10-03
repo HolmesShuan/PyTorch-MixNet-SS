@@ -1,7 +1,23 @@
 # PyTorch-MixNet-S
 Extremely light-weight MixNet with ImageNet Top-1 **75.7%** accuracy and **2.5M** parameters.
 
+Precision | Top-1 (%) | Top-5 (%) | Params
+------------ | ------------- | ----------- | ------------
+FP32 | 75.744 | 92.576 | 2.5 M
+FP16 | 75.714 | 92.570 | 1.3 M
+
 ## [Model Link](./mixnet-ss.pth)
+
+## Load params
+```python
+from collections import OrderedDict
+
+state_dict = torch.load(args.pretrained)
+new_state_dict = OrderedDict()
+for key_ori, key_pre in zip(model.state_dict().keys(), state_dict.keys()):
+    new_state_dict[key_ori] = state_dict[key_pre]
+model.load_state_dict(new_state_dict)       
+```
 
 ## Val setting
 ```python
