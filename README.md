@@ -1,7 +1,9 @@
 # PyTorch-MixNet-S
 Extremely light-weight MixNet with ImageNet Top-1 75.7% accuracy and 2.5M parameters.
 
-### Val setting
+## [Model Link](./mixnet-ss.pth)
+
+## Val setting
 ```python
 normalize = transforms.Normalize(mean=[0.485, 0.456, 0.406],
                                      std=[0.225, 0.225, 0.225])
