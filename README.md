@@ -1,4 +1,4 @@
-# PyTorch-MixNet-S
+# PyTorch-MixNet-SS
 Extremely light-weight MixNet with ImageNet Top-1 **75.7%** accuracy and **2.5M** parameters.
 
 Precision | Top-1 (%) | Top-5 (%) | Params
@@ -31,6 +31,4 @@ val_loader = torch.utils.data.DataLoader(
             transforms.ToTensor(),
             normalize,
         ])),
-        batch_size=args.batch_size, shuffle=False,
-        num_workers=args.workers, pin_memory=True)
-```
+        batch_
