@@ -31,4 +31,5 @@ val_loader = torch.utils.data.DataLoader(
             transforms.ToTensor(),
             normalize,
         ])),
-        batch_
+        batch_size=args.batch_size, shuffle=False,
+        num_workers=args.workers, pin_memory=True)
